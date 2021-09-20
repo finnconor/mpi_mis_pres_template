@@ -1,4 +1,4 @@
-\documentclass[beamer,compress,t]{beamer}
+\documentclass[beamer,aspectratio=169,compress,t]{beamer}
 %%\documentclass[trans,compress,t]{beamer}
 
 \usepackage[utf8]{inputenc}
@@ -7,8 +7,9 @@
 
 \setbeamercovered{invisible}
 
-\title[Titel]{Title}
-\author[Auth.]{Max Mustermann}
+\title[Footer Title]{Title}
+\subtitle{Subtitle}
+\author[F.~Lastname]{Firstname Lastname}
 \institute[MPI MIS]{MPI MIS Leipzig}
 \place{Conference\\City}
 \date[Date]{Date}
@@ -44,8 +45,7 @@
 \end{frame}
 
 % overview of talk with table of contents
-\begin{frame}
-  \frametitle{Overview}
+\begin{frame}{Overview}
 
   \tableofcontents
 \end{frame}
@@ -58,9 +58,7 @@
 \pgfdeclareimage[height=4cm]{bild1}{bild1}
 \pgfdeclareimage[height=4cm]{bild2}{bild2}
 
-\begin{frame}
-  \frametitle{\insertsection}
-  \framesubtitle{Title 1}
+\begin{frame}{Title 1}
 
   Text
 
@@ -72,24 +70,55 @@
 
 \section{Section 2}
 
-\begin{frame}
-  \frametitle{Title 2}
+\begin{frame}{Title 2}
 
-  \begin{block}{Block 1}
+  \begin{block}{Block}
     Text
   \end{block}
   \pause
-
-  \begin{block}{Block 2}
+  
+  \begin{alertblock}{Alert block}
     Text
-  \end{block}
+  \end{alertblock}
+  \pause
+
+  \begin{exampleblock}{Example block}
+    Text
+  \end{exampleblock}
+  \pause
+  
+\end{frame}
+
+\begin{frame}{Title 3}
+
+  \begin{itemize}
+  \item Item 1
+  \item Item 2
+    \begin{itemize}
+    \item Subitem 1
+    \end{itemize}
+  \end{itemize}
+
+  \begin{enumerate}
+  \item Enumerated 1
+  \item Enumerated 2
+    \begin{enumerate}
+    \item Sub-enumerated 1
+    \item Sub-enumerated 2
+    \end{enumerate}
+  \end{enumerate}
+
+  \begin{description}
+  \item[Description 1] First description
+  \item[Description 2] Second description
+  \end{description}
+  
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}
-  \frametitle{Literature}
+\begin{frame}{Literature}
   \small
   \begin{thebibliography}{9}
 

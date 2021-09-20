@@ -6,19 +6,22 @@
 \newcommand{\place}[1]{\renewcommand{\insertplace}{#1}}
 
 % declare logos
-\pgfdeclareimage[width=9.5cm]{MIS-BG-LOGO}{emblem_watermark}
+\pgfdeclareimage[width=9.0cm]{MIS-BG-LOGO}{emblem_watermark}
 \pgfdeclareimage[width=2.7cm]{MPG-LOGO}{minerva_mpg_black}
-\pgfdeclareimage[width=3.7cm]{MIS-WORD-MARK}{word_mark_ger}
+\pgfdeclareimage[width=3.7cm]{MIS-WORD-MARK}{word_mark_eng}
 
 
 \mode<presentation>
   \defbeamertemplate*{title page}{mis theme}
   {
     \begin{tikzpicture}[remember picture,overlay]
-      \node [xshift=5cm,yshift=-4.75cm] at (current page.north west) {\pgfuseimage{MIS-BG-LOGO}};
-      \node [anchor=south east,xshift=-0.25cm,yshift=0.25cm] at (current page.south east) {\pgfuseimage{MPG-LOGO}};
+      % \node [xshift=5.5cm,yshift=-4.5cm] at (current page.north west) {\pgfuseimage{MIS-BG-LOGO}};
+      \node [anchor=south east,xshift=-0.25cm,yshift=0.25cm] at (current page.south east)
+      {\pgfuseimage{MPG-LOGO}};
+      \node [anchor=south west,xshift=0.25cm,yshift=0.4cm] at (current page.south west)
+      {\pgfuseimage{MIS-WORD-MARK}};
     \end{tikzpicture}
-    \begin{beamercolorbox}[right]{title}
+    \begin{beamercolorbox}[center]{title}
       \vskip0.5cm%
       \usebeamerfont{title}\inserttitle\par%
       \ifx\insertsubtitle\@empty%
@@ -28,14 +31,14 @@
       \fi%
     \end{beamercolorbox}%
     \vskip2.5em\par
-    \begin{beamercolorbox}[right]{author}
-      {\usebeamerfont{author at titlepage}\insertauthor}\\[.5em]
-			\pgfuseimage{MIS-WORD-MARK}
+    \begin{beamercolorbox}[center]{author}
+      {\usebeamerfont{author at titlepage}\insertauthor}
     \end{beamercolorbox}%
     \vskip2em\par
     \begin{beamercolorbox}[center]{institute}
       \usebeamerfont{place}\insertplace
     \end{beamercolorbox}
+    \vskip2em\par
     \begin{beamercolorbox}[center]{date}
       \usebeamerfont{date}\insertdate
     \end{beamercolorbox}%

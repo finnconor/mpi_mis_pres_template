@@ -7,7 +7,9 @@
 \ProvidesPackage{beamercolorthemeMIS}
 
 \definecolor{MISScarletRed2}{RGB}{204,0,0}         % cc0000
-
+\definecolor{Butter1}{HTML}{fce94f}
+\definecolor{Chameleon1}{HTML}{8ae234}
+  
 \mode<presentation>
 {
   \setbeamercolor{normal text}{fg=black,bg=white}
@@ -35,12 +37,12 @@
 
   \setbeamercolor*{subtitle}{fg=black}
 
-  \setbeamercolor*{block title}{fg=MISblue}
-  \setbeamercolor*{block title alerted}{parent=alerted text,bg=Chameleon1!25!white}
-  \setbeamercolor*{block title example}{parent=example text,bg=Butter1!25!white}
-  \setbeamercolor*{block body}{}
-  \setbeamercolor*{block body alerted}{bg=Chameleon1!25!white}
-  \setbeamercolor*{block body example}{bg=Butter1!25!white}
+  \setbeamercolor*{block title}{fg=white,bg=MISblue}
+  \setbeamercolor*{block title alerted}{fg=white,bg=MISred}
+  \setbeamercolor*{block title example}{fg=white,bg=MISblue}
+  \setbeamercolor*{block body}{bg=MISblue!20!white}
+  \setbeamercolor*{block body alerted}{bg=MISred!10!white}
+  \setbeamercolor*{block body example}{bg=MISblue!20!white}
 
   \setbeamercolor*{titlelike}{parent=structure}
 
