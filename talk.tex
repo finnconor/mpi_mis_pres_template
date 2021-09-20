@@ -1,0 +1,123 @@
+\documentclass[beamer,compress,t]{beamer}
+%%\documentclass[trans,compress,t]{beamer}
+
+\usepackage[utf8]{inputenc}
+
+\usetheme{MIS}
+
+\setbeamercovered{invisible}
+
+\title[Titel]{Title}
+\author[Auth.]{Max Mustermann}
+\institute[MPI MIS]{MPI MIS Leipzig}
+\place{Conference\\City}
+\date[Date]{Date}
+
+%\subject{subject}            % add optional "subject" for PDF catalog
+%\titlegraphic{}              % optional logo
+
+%%
+%% show section title at beginning of each new section
+%%
+% \AtBeginSection[]
+% {
+%   \begin{frame}<presentation>[plain]
+%     \vfill
+%     \vspace{2em}
+%     \begin{center}
+%       {\Huge \usebeamercolor[fg]{frametitle} \bf \insertsection}
+%     \end{center}
+%     \vfill
+%   \end{frame}
+% }
+
+\setcounter{tocdepth}{1}      % limit table of contents to just section titles
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% titleframe without head-/foot-line
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+% overview of talk with table of contents
+\begin{frame}
+  \frametitle{Overview}
+
+  \tableofcontents
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Section 1}
+
+\pgfdeclareimage[height=4cm]{bild1}{bild1}
+\pgfdeclareimage[height=4cm]{bild2}{bild2}
+
+\begin{frame}
+  \frametitle{\insertsection}
+  \framesubtitle{Title 1}
+
+  Text
+
+  \only<1>{\pgfuseimage{bild1}}
+  \only<2>{\pgfuseimage{bild2}}
+
+  \uncover<3->{Text}
+\end{frame}
+
+\section{Section 2}
+
+\begin{frame}
+  \frametitle{Title 2}
+
+  \begin{block}{Block 1}
+    Text
+  \end{block}
+  \pause
+
+  \begin{block}{Block 2}
+    Text
+  \end{block}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+  \frametitle{Literature}
+  \small
+  \begin{thebibliography}{9}
+
+  \beamertemplatebookbibitems
+
+  \bibitem{Book1}
+    Author,
+    \newblock {\em Titel},
+    \newblock Info.
+
+  \beamertemplatearticlebibitems
+
+  \bibitem{Paper1}
+    Author,
+    \newblock {\em Titel},
+    \newblock Info.
+
+  \bibitem{Paper2}
+    Author,
+    \newblock {\em Titel},
+    \newblock Info.
+
+  \bibitem{Paper3}
+    Author,
+    \newblock {\em Titel},
+    \newblock Info.
+
+  \end{thebibliography}
+\end{frame}
+
+\end{document}

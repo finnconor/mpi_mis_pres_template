@@ -1,0 +1,38 @@
+% Copyright 2011 by Ronald Kriemann <rok@mis.mpg.de>.
+\ProvidesPackage{beamerthemeMIS}
+
+\RequirePackage{tikz}
+
+\definecolor{MISred}{rgb}{0.533 0.085 0.22}
+\definecolor{MISblue}{rgb}{0.18 0.353 0.52}
+
+\mode<presentation>
+{
+  \useinnertheme{circles}
+	\useinnertheme{MIS}
+
+  \useoutertheme{split}
+  \useoutertheme{MIS}
+
+  \usecolortheme{MIS}
+
+  \usefonttheme{professionalfonts}
+  \usefonttheme[onlysmall]{structurebold}
+  \usefonttheme{MIS}
+}
+
+\mode<trans>
+{
+  \useinnertheme{circles}
+  \useoutertheme{MIS}
+  \usecolortheme{MIS}
+
+  \usefonttheme{professionalfonts}
+  \usefonttheme[onlysmall]{structurebold}
+  \setbeamerfont{block title}{size={}}
+  \setbeamerfont{frametitle}{series=\bfseries}
+}
+
+\mode
+<all>
+

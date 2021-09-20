@@ -1,0 +1,75 @@
+% Copyright 2003 by Till Tantau <tantau@users.sourceforge.net>.
+% Copyright 2011 by Ronald Kriemann <rok@mis.mpg.de>.
+%
+% This program can be redistributed and/or modified under the terms
+% of the GNU Public License, version 2.
+
+\ProvidesPackage{beamercolorthemeMIS}
+
+\definecolor{MISScarletRed2}{RGB}{204,0,0}         % cc0000
+
+\mode<presentation>
+{
+  \setbeamercolor{normal text}{fg=black,bg=white}
+  \setbeamercolor{structure}{fg=MISblue}
+
+  \setbeamercolor{alerted text}{fg=MISScarletRed2}
+  \setbeamercolor{example text}{fg=MISScarletRed2}
+
+  \setbeamercolor{item projected}{use=item,fg=white,bg=item.fg!75}
+
+  \setbeamercolor*{palette primary}{fg=white,bg=white}
+  \setbeamercolor*{palette secondary}{parent=palette primary,use=palette primary,bg=palette primary.bg}
+  \setbeamercolor*{palette tertiary}{parent=palette primary,use=palette primary,bg=palette primary.bg}
+  \setbeamercolor*{palette quaternary}{parent=palette primary,use=palette primary,bg=palette primary.bg}
+
+  \setbeamercolor*{sidebar}{parent=palette primary}
+
+  \setbeamercolor*{palette sidebar primary}{fg=white}
+  \setbeamercolor*{palette sidebar secondary}{fg=black}
+  \setbeamercolor*{palette sidebar tertiary}{fg=white}
+  \setbeamercolor*{palette sidebar quaternary}{fg=black}
+
+  \setbeamercolor*{frametitle}{fg=MISblue}%,bg=gray!50!white}
+  \setbeamercolor*{framesubtitle}{fg=MISred}
+
+  \setbeamercolor*{subtitle}{fg=black}
+
+  \setbeamercolor*{block title}{fg=MISblue}
+  \setbeamercolor*{block title alerted}{parent=alerted text,bg=Chameleon1!25!white}
+  \setbeamercolor*{block title example}{parent=example text,bg=Butter1!25!white}
+  \setbeamercolor*{block body}{}
+  \setbeamercolor*{block body alerted}{bg=Chameleon1!25!white}
+  \setbeamercolor*{block body example}{bg=Butter1!25!white}
+
+  \setbeamercolor*{titlelike}{parent=structure}
+
+  \setbeamercolor*{section in head/foot}{fg=MISblue}
+  \setbeamercolor*{author in head/foot}{fg=MISblue}
+
+  \setbeamercolor*{title}{fg=MISred}
+  \setbeamercolor*{author}{fg=MISblue}
+  \setbeamercolor*{date}{fg=MISblue}
+  \setbeamercolor*{title in head/foot}{fg=MISred}
+  \setbeamercolor*{institute}{fg=MISblue}
+  \setbeamercolor*{lower separation line head}{bg=MISred}
+
+  \setbeamercolor*{author in foot}{bg=MISred,fg=white}
+  \setbeamercolor*{title in foot}{bg=MISblue,fg=white}
+
+  \setbeamertemplate{background canvas}[vertical shading][top=white,middle=white,bottom=white]
+}
+
+%%
+%% Transparency format
+%%
+
+\mode<trans>
+{
+  \beamertemplatesolidbackgroundcolor{white}
+  \setbeamercolor{frametitle}{fg=black,bg=gray}
+  \setbeamercolor{author in head/foot}{fg=black!75}
+  \setbeamercolor{lower separation line head}{fg=black!75}
+}
+
+\mode<all>

@@ -1,0 +1,115 @@
+% Copyright 2003 by Till Tantau <tantau@users.sourceforge.net>
+% Copyright 2011 by Ronald Kriemann <rok@mis.mpg.de>.
+%
+% This program can be redistributed and/or modified under the terms
+% of the GNU Public License, version 2.
+
+\ProvidesPackage{beamerouterthemeMIS}
+
+
+% declare logo
+\pgfdeclareimage[width=.55cm]{MIS-HL-LOGO}{emblem_mis_blue}
+
+%%
+%% Normal format
+%%
+
+\mode<presentation>
+{
+
+  \defbeamertemplate*{frametitle}{mis theme}
+  {%
+    \hbox{%
+      \begin{beamercolorbox}[wd=.85\paperwidth,ht=2.25ex,dp=1ex]{frametitle}
+        {\usebeamerfont{frametitle}\insertframetitle}%
+        \ifx\insertframesubtitle\@empty%
+        \else%
+        {%
+          \usebeamercolor[fg]{title in head/foot}\usebeamerfont{framesubtitle}%
+          \;\raise-1pt\hbox{{\tikz\draw[MISred,thick,line cap=round,line join=round] (0em,0.8em) -- (0.2em,0.4em) -- (0em,0em);}}\;%
+          \insertframesubtitle}%
+        \fi%
+      \end{beamercolorbox}%
+      \begin{beamercolorbox}[wd=.15\paperwidth,ht=2.25ex,dp=1ex]{frametitle}
+        \begin{tikzpicture}[remember picture,overlay]
+            \node [xshift=.55cm,yshift=0.17cm] {\pgfuseimage{MIS-HL-LOGO}};
+        \end{tikzpicture}
+      \end{beamercolorbox}
+    }%
+    \nointerlineskip
+    \begin{beamercolorbox}[wd=\paperwidth,colsep=.5pt]{lower separation line head}
+    \end{beamercolorbox}
+  }
+
+  \defbeamertemplate*{headline}{mis theme}
+  {%
+    % \begin{beamercolorbox}{section in head/foot}
+    %   \vskip1pt\insertsectionnavigationhorizontal{\textwidth}{}{}\vskip1pt
+    % \end{beamercolorbox}%
+  }
+
+  \defbeamertemplate*{footline}{mis theme}
+  {%
+    \leavevmode%
+    \hbox{%
+        \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=0.75ex,leftskip=.3cm]{author in foot}%
+          \usebeamerfont{author in head/foot}\insertshorttitle
+        \end{beamercolorbox}%
+        \begin{beamercolorbox}[wd=.4\paperwidth,ht=2.25ex,dp=0.75ex]{author in foot}%
+          \ifx\insertauthor\@empty%
+          \else
+          {\usebeamerfont*{title in head/foot}{\rule[-1pt]{.5pt}{1em}\ \insertshortauthor}}%
+            \fi%
+          \hfill\rule[-1pt]{.5pt}{1em}%
+        \end{beamercolorbox}%
+        \begin{beamercolorbox}[wd=.1\paperwidth,ht=2.25ex,dp=0.75ex,center]{author in foot}%
+          \usebeamerfont{author in head/foot}%
+          \insertframenumber/\inserttotalframenumber
+        \end{beamercolorbox}%
+    }%
+    \vskip0pt%
+  }
+
+  %% make blocks rounded
+  \setbeamertemplate{blocks}[rounded]
+
+  %% disable all navigation icons
+  \setbeamertemplate{navigation symbols}{}
+}
+
+%%
+%% Transparency format
+%%
+
+\mode<trans>
+{
+  \defbeamertemplate*{navigation symbols}{mis theme}{}
+
+  \defbeamertemplate*{frametitle}{mis theme}
+  {
+    \nointerlineskip%
+    \vskip 1pt%
+    \hbox{\leavevmode%
+      \hskip-15bp
+      \begin{beamercolorbox}[wd=.8\paperwidth,ht=2.5ex,dp=2pt]{frametitle}
+        \insertframetitle%
+      \end{beamercolorbox}
+    }
+  }
+
+  \defbeamertemplate*{footline}{mis theme}
+  {%
+    \leavevmode%
+    \hbox{%
+      \begin{beamercolorbox}[wd=.8\paperwidth,ht=2ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm plus1fill]{author in head/foot}%
+        \usebeamerfont{author in head/foot}\insertshorttitle
+      \end{beamercolorbox}%
+      \begin{beamercolorbox}[wd=.2\paperwidth,ht=2ex,dp=1.125ex,leftskip=.2cm plus1fill,rightskip=.2cm plus1fill]{author in head/foot}%
+        \usebeamerfont{author in head/foot}\insertframenumber/\inserttotalframenumber
+      \end{beamercolorbox}
+    }%
+    \vskip0pt%
+  }
+}
+
+\mode<all>
